@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Chorus User Export Tool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='/assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>A Simple Web Form</h1>
+				<p>Write in the boxes, click the button to clear<br />
+				</p>
+			</header>
+
+		<!-- Signup Form -->
+			<form id="signup-form" method="post" action="/clear">
+				<input type="text" placeholder="" >
+				<input type="text" placeholder="" />
+				<input type="submit" value="clear" />
+			</form>
+
+            {% if error %}
+                <p>Oops! Something went wrong with your request. Make sure your entered a valid API key and Site URL.</p>
+            {% endif %}
+
+
+
+	</body>
+</html>
